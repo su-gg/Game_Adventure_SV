@@ -257,7 +257,7 @@ class Game {
         // Score max de 7
         if (score >= 7) {
           alert(
-            "Félicitations ! Vous avez attraper toutes les compétences! Vous pouvez à présent télécharger mon CV"
+            "Félicitations ! Vous avez attrapé toutes les compétences! Vous pouvez à présent télécharger mon CV"
           );
           document.getElementById("downloadCV").style.display = "block";
         }
