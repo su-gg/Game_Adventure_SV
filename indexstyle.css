@@ -64,6 +64,7 @@ button {
   color: azure;
   background-color: #ff66c4;
   border: 2px dotted azure;
+  width: 100%;
 }
 
 .button {
@@ -111,18 +112,43 @@ canvas {
   animation: change 3s ease-in-out;
   animation-fill-mode: forwards;
 }
+#parent {
+  position: relative;
+}
+
 #sprite {
   width: 100%;
 }
 
+#help {
+  margin-top: 10px;
+  margin-left: 366px;
+  font-size: 10px;
+  color: cadetblue;
+}
+
+#score {
+  display: inline-block;
+  border: 2px inset #ff66c4;
+  margin-left: 366px;
+  margin-bottom: 5px;
+  font-size: x-large;
+}
+
+#boutonCV {
+  display: inline-block;
+  margin-left: 40%;
+  margin-top: 20px;
+  width: 20%;
+}
 @keyframes change {
   100% {
-    background-image: url(img/bg_2slide.jpg);
+    background-image: url(img/bg-s2-final.png);
     background-size: 100%;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 414px) {
   .block-one {
     flex-direction: column;
     width: 50%;
@@ -145,7 +171,6 @@ canvas {
   }
 
   #sprite {
-    width: 10px;
-    height: 4300%;
+    width: 100%;
   }
 }
