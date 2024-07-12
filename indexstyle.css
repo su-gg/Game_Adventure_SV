@@ -8,7 +8,7 @@ html {
 .logo {
   font-family: monospace;
   background-color: #131313;
-  color: antiquewhite;
+  color: azure;
   height: fit-content;
   width: 100%;
   text-align: left;
@@ -19,37 +19,51 @@ html {
 }
 
 body {
-  background-color: antiquewhite;
+  /*position: relative;  à garder ou supprimer*/
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  margin: auto;
+  min-height: 100vh;
 }
 
-h1 {
+.titlegame {
   font-family: monospace;
   font-style: italic;
+  font-size: 4vw;
   text-align: center;
-  font-size: 50px;
-  padding: 15px;
-  color: #131313;
-  text-shadow: 0 0 10vw 0vw #ff66c4;
+  color: azure;
+  text-shadow: 5px 5px 15px #ff66c4;
 }
 
-.question {
+#container {
   display: flex;
-  position: relative;
-  font-family: monospace;
-  text-align: center;
-  font-size: 25px;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  padding: 0 40px;
 }
 
-#block-one {
-  float: left;
-  width: 40%;
-  margin-left: 20%;
-  padding: 15px;
+.block-one,
+.block-two {
+  height: 400px;
+  width: 400px;
   font-family: monospace;
-  text-align: justify;
   background-color: #131313;
   color: azure;
-  border: 2px dotted #ff66c4;
+  box-shadow: 5px 5px 25px #ff66c4;
+  padding: 10px 30px;
+  margin-bottom: 30px;
+}
+
+.block-two {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+}
+
+.titleBlock1 {
+  font-family: monospace;
+  text-align: left;
 }
 
 a {
@@ -58,23 +72,21 @@ a {
 }
 
 button {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  justify-items: center;
+  justify-items: center;
   font-family: monospace;
+  font-weight: bold;
+  margin-top: 90px;
+  text-transform: uppercase;
   text-align: center;
-  font-size: 35px;
+  font-size: 2vw;
   color: azure;
   background-color: #ff66c4;
-  border: 2px dotted azure;
-  width: 100%;
-}
-
-.button {
-  display: flex;
-  flex-direction: column;
-  width: 15%;
-  padding-left: 10%;
-  font-family: monospace;
-  text-align: center;
-  font-size: 35px;
+  border: 2px solid azure;
+  width: 50%;
 }
 
 a:hover {
@@ -89,26 +101,27 @@ button:hover {
 }
 
 #masque {
-  overflow: hidden; /* à remettre en hidden*/
-  top: 370px;
-  left: 340px;
+  overflow: hidden;
+  top: 20vh;
+  left: 20vw;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   font-family: monospace;
   text-align: end;
   width: 100%;
   background-color: #131313;
-  color: antiquewhite;
+  color: azure;
 }
 
 canvas {
-  display: flex;
+  position: absolute;
+  left: 25%;
   border: 2px solid #ff66c4;
   background-image: url("img/bg_1slide_SuGG.png");
   background-size: 100%;
-  margin-right: auto;
-  margin-left: auto;
   animation: change 3s ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -121,7 +134,7 @@ canvas {
 }
 
 #help {
-  margin-top: 10px;
+  margin-top: 200px;
   margin-left: 366px;
   font-size: 10px;
   color: cadetblue;
@@ -130,16 +143,15 @@ canvas {
 #score {
   display: inline-block;
   border: 2px inset #ff66c4;
-  margin-left: 366px;
-  margin-bottom: 5px;
-  font-size: x-large;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  font-size: 1.5vw;
 }
 
 #boutonCV {
   display: inline-block;
-  margin-left: 40%;
-  margin-top: 20px;
-  width: 20%;
+  margin-left: 45%;
+  width: 30%;
 }
 @keyframes change {
   100% {
@@ -162,7 +174,7 @@ canvas {
   }
   canvas {
     display: flex;
-    width: 80%;
+    width: 414;
   }
 
   #masque {
@@ -172,5 +184,10 @@ canvas {
 
   #sprite {
     width: 100%;
+  }
+
+  #score {
+    flex-direction: column;
+    margin-left: 10%;
   }
 }

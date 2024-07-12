@@ -22,7 +22,7 @@ const skillSrc = [
   "img/git.png",
 ];
 
-// définir une position différente de chaque image chargées
+// définir une position différente de chaque image chargée dans un tableau
 const positions = [
   { x: 20, y: 250 },
   { x: 70, y: 150 },
@@ -137,7 +137,7 @@ class Game {
     this.masque.style.height = "65px";
     this.masque.style.overflow = "hidden";
     this.masque.style.position = "relative";
-    this.masque.style.border = "1px solid pink"; // aide visu pour encadrer le sprite souhaité - à mettre en commentaire pour la publication
+    //this.masque.style.border = "1px solid pink"; // aide visu pour encadrer le sprite souhaité - à mettre en commentaire pour la publication
   }
 
   //positionnement du sprite
